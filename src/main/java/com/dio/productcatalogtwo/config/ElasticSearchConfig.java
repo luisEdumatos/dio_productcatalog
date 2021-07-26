@@ -12,7 +12,7 @@ import org.springframework.data.elasticsearch.core.EntityMapper;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.dio.productcatalog.repository")
+@EnableElasticsearchRepositories(basePackages = "com.dio.productcatalogtwo.repository")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     @Override
