@@ -8,6 +8,12 @@ group = 'com.dio'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
 repositories {
 	mavenCentral()
 }
@@ -16,8 +22,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+	implementation group: 'redis.clients', name: 'jedis', version: '3.2.0'
+	compileOnly 'redis.clients:jedis'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
